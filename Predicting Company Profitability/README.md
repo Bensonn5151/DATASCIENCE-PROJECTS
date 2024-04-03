@@ -39,14 +39,12 @@ Performance of Regression Models:
 Linear Regression (lr):
 R-squared: 0.9828,
 Mean Absolute Error: 1271.04,
-Time taken: 0.0027 seconds,
-Description: Achieved the highest predictive accuracy among the models tested.
+Description: Achieved a high predictive accuracy among the models tested.
 
 
 Decision Tree Regression (dt):
 R-squared: 0.9422,
 Mean Absolute Error: 879.02,
-Time taken: 0.0058 seconds,
 Description: Showed competitive performance, but with potential for overfitting.
 
 
@@ -54,13 +52,12 @@ Random Forest Regression (rf):
 R-squared: 0.9983,
 Mean Absolute Error: 279.06,
 Time taken: 0.3560 seconds,
-Description: Demonstrated robust performance, balancing bias and variance effectively.
-
+Description: The model captures the underlying patterns in the data without overfitting (high variance) or underfitting (high bias). The best model so far
 
 MLP Regression (mlp):
 R-squared: 0.9424,
 Mean Absolute Error: 1861.60,
-Time taken: 3.6188 seconds.
+Description:Potential for overfitting.
 
 
 Support Vector Regression (svr):
