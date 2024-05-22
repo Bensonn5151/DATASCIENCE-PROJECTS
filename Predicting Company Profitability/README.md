@@ -33,35 +33,84 @@ Data Preprocessing:
 Applied log transform using numpy to handle outliers and improve model performance.
 
 
+Metrics Explained
+R-squared (R2):
+
+This metric indicates the proportion of the variance in the dependent variable that is predictable from the independent variables.
+
+A R-squared value of 1 indicates a perfect fit, meaning the model explains all the variability in the target variable.
+A R-Squared value of 0 indicates that the model does not explain any variability in the target variable.
+
+
+Mean Absolute Error (MAE):
+
+MAE measures the average magnitude of the errors in a set of predictions, without considering their direction (i.e., it's a measure of prediction accuracy).
+It is calculated as the average of the absolute differences between predicted values and observed values.
+Lower MAE values indicate better model performance.
+
+
+Time Taken:
+
+This metric measures the computational time required to train and evaluate the model.
+Shorter times are better, especially for large datasets or when computational resources are limited.
 Results
 
-Performance of Regression Models:
-Linear Regression (lr):
-R-squared: 0.9828,
-Mean Absolute Error: 1271.04,
-Description: Achieved a high predictive accuracy among the models tested.
+
+Model Performance
+Linear Regression:
+
+R-Squared: 0.8849866646482115
+MAE: 2816.6087291319423
+Time Taken: 0.0026941299438476562 seconds
+Interpretation: Good R-Squared indicating a decent fit, but relatively high MAE.
+
+DecisionTree:
+R-Squared: 0.9423155803979703
+MAE: 822.3256961999989
+Time Taken: 0.006546974182128906 seconds
+Interpretation: Excellent R-Squared indicating a very good fit, and low MAE, suggesting high accuracy.
+
+RandomForest:
+R-Squared: 0.9911922648688082
+MAE: 377.234870041499
+Time Taken: 0.31728672981262207 seconds
+Interpretation: Outstanding R-Squared indicating almost perfect fit, and very low MAE, indicating high accuracy. However, it takes longer to compute.
+
+MLP (Multi-Layer Perceptron):
+
+R_Squared: 0.9462261037256653
+MAE: 1394.7935544029287
+Time Taken: 3.6834280490875244 seconds
+Interpretation: Very good R-Squared and reasonably low MAE, but much higher computational time compared to other models.
 
 
-Decision Tree Regression (dt):
-R-squared: 0.9422,
-Mean Absolute Error: 879.02,
-Description: Showed competitive performance, but with potential for overfitting.
+Support Vector Regression (SVR):
+R-Squared: 0.007294690769123702
+MAE: 34838.30757195061
+Time Taken: 0.06341719627380371 seconds
+Interpretation: Extremely poor performance with very low R-Squared and very high MAE, indicating it is not suitable for this dataset.
+XGBoost:
+
+R-Squared: 0.9431746126142454
+MAE: 963.8603035500003
+Time Taken: 0.17070913314819336 seconds
+Interpretation: Excellent R-Squared and low MAE, indicating high accuracy, with moderate computational time.
+
+Top Two Models
+RandomForest:
+
+R^2: 0.9911922648688082
+MAE: 377.234870041499
+Time Taken: 0.31728672981262207 seconds
+Reason: This model has the highest R-Squared indicating the best fit, and the lowest MAE, indicating the highest accuracy. Although it takes longer to compute compared to some other models, the accuracy benefits outweigh the computational cost.
+
+DecisionTree:
+
+R^2: 0.9423155803979703
+MAE: 822.3256961999989
+Time Taken: 0.006546974182128906 seconds
+Reason: This model also performs very well with a high R-Squared and low MAE, and it has a very short computation time, making it efficient and effective.
 
 
-Random Forest Regression (rf):
-R-squared: 0.9983,
-Mean Absolute Error: 279.06,
-Time taken: 0.3560 seconds,
-Description: The model captures the underlying patterns in the data without overfitting (high variance) or underfitting (high bias). The best model so far
-
-MLP Regression (mlp):
-R-squared: 0.9424,
-Mean Absolute Error: 1861.60,
-Description:Potential for overfitting.
-
-
-Support Vector Regression (svr):
-R-squared: 0.0092,
-Mean Absolute Error: 34789.77,
-Time taken: 0.0588 seconds.
-Description: Performed relatively less accurately compared to other models, possibly due to the complexity of the dataset.
+Summary
+The RandomForest regressor stands out as the best overall performer with the highest  R-Squared and lowest MAE, making it highly accurate for predicting profits in this case. The DecisionTree regressor also performs excellently, balancing high accuracy with extremely efficient computation time.
